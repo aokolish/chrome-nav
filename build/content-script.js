@@ -40,6 +40,7 @@ window.onload = function() {
     return context.stroke();
   };
   html.onmousedown = function(e) {
+    this.finalDirection = null;
     if (e.which === 3) {
       appendCanvas();
       this.prevPoint = new Point(e.clientX, e.clientY);
@@ -62,6 +63,9 @@ window.onload = function() {
     }
   };
   return html.onmouseup = function() {
+    if (this.finalDirection == null) {
+      return false;
+    }
     switch (this.finalDirection) {
       case 'left':
         window.history.back();

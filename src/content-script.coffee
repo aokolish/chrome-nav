@@ -30,6 +30,7 @@ window.onload = ->
     context.stroke()
 
   html.onmousedown = (e) ->
+    @finalDirection = null
     if e.which == 3
       appendCanvas()
       @prevPoint = new Point e.clientX, e.clientY
@@ -46,6 +47,9 @@ window.onload = ->
         @prevPoint = curPoint
 
   html.onmouseup = ->
+    unless @finalDirection?
+      return false
+
     switch @finalDirection
       when 'left' then window.history.back()
       when 'right' then window.history.forward()
