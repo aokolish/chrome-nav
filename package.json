@@ -1,0 +1,12 @@
+{
+  "name": "chrome-nav",
+  "version": "1.0.0",
+  "author": "Alex Okolish",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.8",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-coffee": "^0.11.1"
+  }
+}
