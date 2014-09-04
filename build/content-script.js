@@ -20,6 +20,7 @@ window.onload = function() {
     canvas.id = 'drag-canvas';
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    canvas.setAttribute('style', "margin: 0; position: fixed; top: 0; left: 0; background: transparent");
     return html.appendChild(canvas);
   };
   removeCanvas = function() {
